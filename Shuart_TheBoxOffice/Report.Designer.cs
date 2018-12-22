@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTotalTickets = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,9 +67,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.panel1.Location = new System.Drawing.Point(12, 46);
+            this.panel1.Location = new System.Drawing.Point(12, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 380);
+            this.panel1.Size = new System.Drawing.Size(630, 305);
             this.panel1.TabIndex = 2;
             // 
             // txtDetails
@@ -78,7 +79,7 @@
             this.txtDetails.Name = "txtDetails";
             this.txtDetails.ReadOnly = true;
             this.txtDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDetails.Size = new System.Drawing.Size(597, 330);
+            this.txtDetails.Size = new System.Drawing.Size(597, 250);
             this.txtDetails.TabIndex = 3;
             // 
             // comboTheatreSelect
@@ -128,11 +129,22 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Total Tickets:";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(497, 386);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(145, 34);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Close for the day...";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 432);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtTotalTickets);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label txtTotalTickets;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnClose;
     }
 }

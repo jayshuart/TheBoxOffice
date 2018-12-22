@@ -65,5 +65,10 @@ namespace Shuart_TheBoxOffice
             //apply built string to details block
             txtDetails.Text = details;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
