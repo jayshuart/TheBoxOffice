@@ -15,6 +15,7 @@ namespace Shuart_TheBoxOffice
         Decimal[] tickets = new Decimal[5];
         String[] movies = new string[5];
         List<String> sales = new List<String>();
+        int ticketsSold = 0;
 
         public BuyTickets()
         {
@@ -41,7 +42,7 @@ namespace Shuart_TheBoxOffice
         private void btnCountSales_Click(object sender, EventArgs e)
         {
             //generate report form
-            Report details = new Report(sales, movies);
+            Report details = new Report(sales, movies, ticketsSold);
 
             //switch forms
             details.Show();
@@ -66,6 +67,9 @@ namespace Shuart_TheBoxOffice
             //check if we can buy the ticket
             if (numTickets.Value <= tickets[comboMovieSelect.SelectedIndex] && tickets[comboMovieSelect.SelectedIndex] != 0)
             {
+                //up tickets sold
+                ticketsSold += (int)numTickets.Value;
+
                 //add sale to list of sales
                 String sale = comboMovieSelect.SelectedItem.ToString() + ": " + numTickets.Value.ToString();
                 sales.Add(sale);

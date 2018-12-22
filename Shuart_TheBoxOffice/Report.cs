@@ -19,7 +19,7 @@ namespace Shuart_TheBoxOffice
             InitializeComponent();
         }
 
-        public Report(List<String> sales, String[] movies)
+        public Report(List<String> sales, String[] movies, int totalTickets)
         {
             //base init
             InitializeComponent();
@@ -41,6 +41,10 @@ namespace Shuart_TheBoxOffice
 
             //apply built string to details block
             txtDetails.Text = details;
+
+            //define total sales
+            txtTotalSales.Text = sales.Count().ToString();
+            txtTotalTickets.Text = totalTickets.ToString();
         }
 
         private void comboTheatreSelect_SelectedIndexChanged(object sender, EventArgs e)
